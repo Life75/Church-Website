@@ -3,7 +3,9 @@ import NavigationHeader from "./components/NavigationHeader.vue"
 </script>
 
 <template>
-  <NavigationHeader></NavigationHeader>
+  <el-affix :offset="0">
+    <NavigationHeader></NavigationHeader>
+  </el-affix>
   <RouterView></RouterView>
 </template>
 
