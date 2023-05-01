@@ -12,7 +12,7 @@
     <el-menu-item index="0" style="">
       <el-image
         v-if="!checkIfPhone()"
-        :fit="`fit`"
+        fit="cover"
         src="https://img.icons8.com/glyph-neue/64/null/cross.png" />
 
       <div class="flex flex-col text-center">

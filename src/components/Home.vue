@@ -1,6 +1,6 @@
 <template>
   <div class=" text-center justify-center">
-    <div class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white cursor-pointer ">
+    <div class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white cursor-default ">
       GOD IS CRAZY ABOUT YOU, AND SO ARE WE! 
     </div>
     <el-carousel class="items-center opacity-90" :autoplay="true" height="600px">
@@ -99,7 +99,7 @@ import Event from "./Event.vue";
 }
 
 .background3 {
-  background: #eee url(../assets/church_img/outside-side.jpg);
+  background: #eee url(https://wallpaperaccess.com/full/31192.jpg);
   background-position: 50% 35%;
   width: 100%;
   height: 100%;
