@@ -1,6 +1,6 @@
 <template>
   <div class=" text-center justify-center">
-    <div class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white ">
+    <div class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white cursor-pointer ">
       GOD IS CRAZY ABOUT YOU, AND SO ARE WE! 
     </div>
     <el-carousel class="items-center opacity-90" :autoplay="true" height="600px">
