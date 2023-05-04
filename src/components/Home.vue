@@ -99,7 +99,7 @@ import Event from "./Event.vue";
 }
 
 .background3 {
-  background: #eee url(https://wallpaperaccess.com/full/31192.jpg);
+  background: #eee url(../assets/church_img/outside-side.jpg);
   background-position: 50% 35%;
   width: 100%;
   height: 100%;
