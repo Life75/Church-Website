@@ -17,7 +17,7 @@
 
       <div class="flex flex-col text-center">
         <span class="text-font text-2xl" @click="homeRoute()"
-          >Jesus Can Help Ministries</span
+          >Jesus Can Help Ministry</span
         >
         <span class="text-font text-xl text-gray-500 tracking-widest">Pensacola</span>
       </div>

@@ -4,10 +4,18 @@ import App from './App.vue'
 import router from './router/main'
 
 import './style.css'
+import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+
 
 import 'element-plus/dist/index.css'
 
+//import Vuetify from 'vuetify'
+
+
+
 const app = createApp(App)
+//  app.use(Vuetify)
+
 app.use(router)
 app.use(ElementPlus)
 app.mount('#app')
