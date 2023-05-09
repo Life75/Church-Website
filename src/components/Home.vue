@@ -53,9 +53,19 @@
     </div>
     <span class="flex items-center justify-center">
       <div class="mt-20 w-1/4 justify-center items-center">
-        <h1 class="text-5xl text-font pb-14 justify-center">Current Events</h1>
+        <h1 class="text-5xl text-font pb-14 justify-center">Upcoming Events</h1>
         <div class="flex space-x-10">
-          <Event />
+          <el-carousel type="card" height="300px" interval="7000" indicator-position="none" style="width: 500px">
+            <el-carousel-item>
+              <Event/>
+            </el-carousel-item>
+            <el-carousel-item>
+              <Event/>
+            </el-carousel-item>
+            <el-carousel-item>
+              <Event/>
+            </el-carousel-item>
+          </el-carousel>
         </div>
       </div>
     </span>

@@ -25,9 +25,6 @@
       <router-link to="/"></router-link
     ></el-menu-item>
     <span class="px-44"></span>
-    <el-menu-item style="font-size: 20px" index="1">
-      <template #title> NEW HERE? </template>
-    </el-menu-item>
 
     <el-menu-item style="font-size: 20px" index="1">
       <template #title> EVENTS </template>

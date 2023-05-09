@@ -1,27 +1,34 @@
 <template>
     <el-card :body-style="{ padding: '0px'}">
-    <div class="flex ">
         <img
           src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
           class="image"
         />
-        <div style="padding: 10px">
-        
-          <span>Yummy hamburger</span>
+        <div style="padding: 14px">
+          <span>{{ event?.title }}</span>
           <div class="bottom">
-            <time class="time">{{ currentDate }}</time>
-            <el-button text class="button">Operating</el-button>
+            <time class="time">{{ event?.date }}</time>
+            <el-button :type="'primary'" color="#7c3aed" class="button" @click="eventPush()">More Details</el-button>
           </div>
         </div>
-    </div>
-    </el-card>
+      </el-card>
 </template>
 
 
 <script setup lang="ts">
-   import { ref } from 'vue'
+  import { PropType, defineProps } from 'vue'
+  import IEvent from '../Interfaces/IEvent';
+  import router from '../router/main';
+  
+  defineProps({
+    event: Object as PropType<IEvent>
+  })
 
-const currentDate = ref(new Date()) 
+  function eventPush(): void{
+    router.push('/Events') //push the current route params through 
+  }
+
+  //const currentDate = ref(new Date()) 
 
 </script>
 
