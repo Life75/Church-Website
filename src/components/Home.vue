@@ -3,27 +3,27 @@
     <div class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white cursor-default ">
       GOD IS CRAZY ABOUT YOU, AND SO ARE WE! 
     </div>
-    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" height="600px">
+    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center " style="background-color: black; width: auto; align-items: center; justify-content: center;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" height="600px">
       <el-carousel-item>
-        <video autoplay loop controls muted>
+        <video autoplay loop muted>
           <source src="../assets/church_vid/test_3sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
       <el-carousel-item>
-        <video autoplay loop controls muted>
+        <video autoplay loop  muted>
           <source src="../assets/church_vid/firstLady_3sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
       
       <el-carousel-item>
-        <video autoplay loop controls muted>
+        <video autoplay loop  muted>
           <source src="../assets/church_vid/pastor_13sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
 
       
       <el-carousel-item>
-        <video autoplay loop controls muted>
+        <video autoplay loop  muted>
           <source src="../assets/church_vid/test.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
