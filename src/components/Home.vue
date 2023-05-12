@@ -3,9 +3,10 @@
     <div class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white cursor-default ">
       GOD IS CRAZY ABOUT YOU, AND SO ARE WE! 
     </div>
-    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center " style="background-color: black; width: auto; align-items: center; justify-content: center;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" height="600px">
-      <el-carousel-item>
-        <video autoplay loop muted>
+    <div style="">
+    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center " style=" background-color: black; width: auto; align-items: center; justify-content: center; object-fit: fill;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" height="600px">
+      <el-carousel-item style="object-fit:fill">
+        <video autoplay loop muted style="object-fit: fill; image-fit:fill">
           <source src="../assets/church_vid/test_3sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
@@ -28,12 +29,14 @@
         </video>
       </el-carousel-item>
     </el-carousel>
+  </div>
     <div class="pt-5 flex space-x-8 justify-center">
       <el-button
         style="color: #e5eaf3; width: 150px; font-size: large"
         :round="true"
         size="large"
         color="#7c3aed"
+        @click="router.push('/Testimonials')"
         >Testimonials</el-button
       >
       <el-button
@@ -41,6 +44,7 @@
         :round="true"
         size="large"
         color="#7c3aed"
+        @click="router.push('/History')"
         >Our History</el-button
       >
       <el-button
@@ -54,18 +58,9 @@
     <span class="flex items-center justify-center">
       <div class="mt-20 w-1/4 justify-center items-center">
         <h1 class="text-5xl text-font pb-14 justify-center">Upcoming Events</h1>
-        <div class="flex space-x-10">
-          <el-carousel type="card" height="300px" interval="7000" indicator-position="none" style="width: 500px">
-            <el-carousel-item>
-              <Event/>
-            </el-carousel-item>
-            <el-carousel-item>
-              <Event/>
-            </el-carousel-item>
-            <el-carousel-item>
-              <Event/>
-            </el-carousel-item>
-          </el-carousel>
+        <div class="flex justify-center content-center">
+          <Event/>
+
         </div>
       </div>
     </span>
@@ -96,6 +91,7 @@
 
 <script setup lang="ts">
 import Event from "./Event.vue";
+import router from "../router/main";
 
 </script>
 
