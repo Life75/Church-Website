@@ -1,10 +1,10 @@
 <template>
   <div class=" text-center justify-center">
-    <div class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white cursor-default ">
-      GOD IS CRAZY ABOUT YOU, AND SO ARE WE! 
+    <div v-if="!checkIfPhone()" class="z-10 absolute text-center text-4xl justify-center items-center w-full float-left mt-96 text-5xl text-font text-white cursor-default uppercase ">
+      Where Hope Rises and Miracles Flourish
     </div>
     <div style="">
-    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center brightness-60" style="background-color: black; align-items: center; justify-content: center; object-fit: fill;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" height="650px">
+    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center brightness-50" style="background-color: black; align-items: center; justify-content: center; object-fit: fill;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" :height="setHeight()">
       <el-carousel-item style="object-fit:fill">
         <video autoplay loop muted style="object-fit: fill; image-fit:fill">
           <source src="../assets/church_vid/test_3sec.mp4" type="video/mp4" >
@@ -92,6 +92,25 @@
 <script setup lang="ts">
 import Event from "./Event.vue";
 import router from "../router/main";
+
+function setHeight(): string {
+  if(checkIfPhone()) {
+    return '200px'
+  }
+  else return '700px'
+}
+
+function checkIfPhone(): boolean {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    return true 
+  } else {
+    return false
+  }
+}
 
 </script>
 
