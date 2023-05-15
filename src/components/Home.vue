@@ -4,7 +4,7 @@
       GOD IS CRAZY ABOUT YOU, AND SO ARE WE! 
     </div>
     <div style="">
-    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center " style=" background-color: black; width: auto; align-items: center; justify-content: center; object-fit: fill;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" height="600px">
+    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center brightness-60" style="background-color: black; align-items: center; justify-content: center; object-fit: fill;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" height="650px">
       <el-carousel-item style="object-fit:fill">
         <video autoplay loop muted style="object-fit: fill; image-fit:fill">
           <source src="../assets/church_vid/test_3sec.mp4" type="video/mp4" >
@@ -44,8 +44,8 @@
         :round="true"
         size="large"
         color="#7c3aed"
-        @click="router.push('/History')"
-        >Our History</el-button
+        @click="router.push('/Pastor')"
+        >Our Pastor</el-button
       >
       <el-button
         style="color: #e5eaf3; width: 150px; font-size: large"
@@ -65,7 +65,7 @@
       </div>
     </span>
     <el-divider></el-divider>
-    <div class="flex-col h-44 bg-violet-200 bg-opacity-60">
+    <div class="flex-col h-44 bg-[#8d73b0] bg-opacity-60">
       <div class="h-1/3"></div>
       <h1 class="flex items-center justify-center text-font text-4xl">
         Service Times & Location
@@ -98,6 +98,22 @@ import router from "../router/main";
 <style>
 .text-font {
   font-family: "Muli";
+}
+
+.primary-button {
+    padding: 1em 2em;
+    background-color: var(--primbuttn);
+    color: var(--secondary);
+    border-radius: 6px;
+    transition: transform ease 0.2s, box-shadow ease 0.2s;
+    display: inline-block;
+    font-size: 18px;
+    z-index: 2;
+}
+
+video {
+  height: auto;
+  width: 100%;
 }
 
 .background0 {

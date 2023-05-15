@@ -10,10 +10,7 @@
     class="text-font"
   >
     <el-menu-item index="0" style="" @click="homeRoute()">
-      <el-image
-        v-if="!checkIfPhone()"
-        fit="cover"
-        src="https://img.icons8.com/glyph-neue/64/null/cross.png" />
+   
 
       <div class="flex flex-col text-center" >
         <span class="text-font text-2xl" 

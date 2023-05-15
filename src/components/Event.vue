@@ -1,9 +1,10 @@
 <template>
-<div class="max-w-sm rounded overflow-hidden shadow-lg " >
+<div class="max-w-sm rounded overflow-hidden shadow-lg  " >
   <img class="w-full" src="https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg" alt="Sunset in the mountains">
+  <div>Title</div>
   <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p class="text-gray-700 text-base">
+    <div class="font-bold text-xl mb-2 p-2">The Coldest Sunset</div>
+    <p class="text-gray-700 text-base whitespace-normal">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
     </p>
   </div>
