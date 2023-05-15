@@ -28,6 +28,12 @@
           <source src="../assets/church_vid/test.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
+
+      <el-carousel-item>
+        <video autoplay loop  muted>
+          <source src="../assets/church_vid/thomas_16sec.mp4" type="video/mp4" >
+        </video>
+      </el-carousel-item>
     </el-carousel>
   </div>
     <div class="pt-5 flex space-x-8 justify-center">
@@ -35,7 +41,7 @@
         style="color: #e5eaf3; width: 150px; font-size: large"
         :round="true"
         size="large"
-        color="#7c3aed"
+        color="#611f69"
         @click="router.push('/Testimonials')"
         >Testimonials</el-button
       >
@@ -43,7 +49,7 @@
         style="color: #e5eaf3; width: 150px; font-size: large"
         :round="true"
         size="large"
-        color="#7c3aed"
+        color="#611f69"
         @click="router.push('/Pastor')"
         >Our Pastor</el-button
       >
@@ -51,18 +57,17 @@
         style="color: #e5eaf3; width: 150px; font-size: large"
         :round="true"
         size="large"
-        color="#7c3aed"
+        color="#611f69"
         >Learn More</el-button
       >
     </div>
-    <span class="flex items-center justify-center">
-      <div class="mt-20 w-1/4 justify-center items-center">
-        <h1 class="text-5xl text-font pb-14 justify-center">Upcoming Events</h1>
+    <div class="pt-6"></div>
+    <span class="flex-row items-center justify-center ">
+   
+        <h1 class="text-5xl text-font mb-4 justify-center mt-7">Upcoming Events</h1>
         <div class="flex justify-center content-center">
           <Event/>
-
         </div>
-      </div>
     </span>
     <el-divider></el-divider>
     <div class="flex-col h-44 bg-[#8d73b0] bg-opacity-60">
@@ -92,10 +97,10 @@
 <script setup lang="ts">
 import Event from "./Event.vue";
 import router from "../router/main";
-
+//use these colors https://realtimecolors.com/?colors=000000-ffffff-611f69-f4ede4-ecb22e
 function setHeight(): string {
   if(checkIfPhone()) {
-    return '200px'
+    return '220px'
   }
   else return '700px'
 }
