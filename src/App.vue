@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavigationHeader from "./components/NavigationHeader.vue"
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
@@ -7,6 +8,9 @@ import NavigationHeader from "./components/NavigationHeader.vue"
     <NavigationHeader></NavigationHeader>
   </el-affix>
   <RouterView></RouterView>
+  <el-affix :offset="0">
+    <Footer></Footer>
+  </el-affix>
 </template>
 
 <style>

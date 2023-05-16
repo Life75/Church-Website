@@ -37,10 +37,14 @@
             May the peace of God that surpasses all understanding be with you, and may your journey towards spiritual well-being be filled with grace, love, and profound transformation.
           </div>
           <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl pt-6">Contact Info</h1>
-          <p class="mb-4">
-           email: omona72@outlook.com
-          </p>
-        </article>
+          <div class="flex space-x-2"><el-icon class="mt-1"><Message/></el-icon>
+            <p class="pb-6">
+      
+      omona72@outlook.com
+      </p>
+   
+          </div>
+           </article>
 
            
           
