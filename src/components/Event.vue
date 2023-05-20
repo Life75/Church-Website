@@ -24,15 +24,12 @@
 <script setup lang="ts">
   import { PropType, defineProps } from 'vue'
   import IEvent from '../Interfaces/IEvent';
-  import router from '../router/main';
   
   defineProps({
     event: Object as PropType<IEvent>
   })
 
-  function eventPush(): void{
-    router.push('/Events') //push the current route params through 
-  }
+  
 
   //const currentDate = ref(new Date()) 
 
