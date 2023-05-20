@@ -4,7 +4,7 @@
     mode="horizontal"
     style="align-items: center; justify-content: center"
     :ellipsis="true"
-    background-color="#E5EAF3"
+    background-color="#f9eeea"
     text-color="#07031A"
     active-text-color="#4B0082"
     class="text-font"
@@ -24,11 +24,29 @@
     <span class="px-44"></span>
 
     <el-menu-item style="font-size: 20px" index="1">
-      <template #title> EVENTS </template>
+      <template #title> 
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Coming Soon!"
+        placement="bottom-end"
+      >
+      <p>EVENTS</p> 
+        </el-tooltip>
+      </template>
     </el-menu-item>
 
     <el-menu-item style="font-size: 20px" index="1">
-      <template #title> ABOUT US</template>
+      <template #title> 
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Coming Soon!"
+        placement="bottom-end"
+      >
+      <p>ABOUT US</p> 
+        </el-tooltip>
+      </template>
     </el-menu-item>
   </el-menu>
 </template>

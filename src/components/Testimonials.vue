@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <el-empty description="Empty" :image-size="500"></el-empty>
+    <div class="">
+        <el-empty description="Empty" :image-size="200"></el-empty>
     </div>
 </template>
 

@@ -8,9 +8,7 @@ import Footer from "./components/Footer.vue";
     <NavigationHeader></NavigationHeader>
   </el-affix>
   <RouterView></RouterView>
-  <el-affix :offset="0">
-    <Footer></Footer>
-  </el-affix>
+    <Footer class="footer"></Footer>
 </template>
 
 <style>
@@ -19,5 +17,19 @@ import Footer from "./components/Footer.vue";
     src: url('https://fonts.googleapis.com/css?family=Lora&display=swap');
     
    }
+
+
+
+   #footer{
+    position:fixed;
+    bottom:0;
+}
+
+#app {
+    min-height: 100vh; 
+    margin: 0; 
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
 
 </style>

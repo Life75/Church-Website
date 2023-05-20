@@ -53,13 +53,7 @@
         @click="router.push('/Pastor')"
         >Our Pastor</el-button
       >
-      <el-button
-        style="color: #e5eaf3; width: 150px; font-size: large"
-        :round="true"
-        size="large"
-        color="#611f69"
-        >Learn More</el-button
-      >
+   
     </div>
     <div class="pt-6"></div>
     <span class="flex-row items-center justify-center ">
