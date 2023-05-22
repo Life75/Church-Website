@@ -4,33 +4,33 @@
       Where Hope Rises and Miracles Flourish
     </div>
     <div style="">
-    <el-carousel interval="3500" direction="vertical"  class="items-center opacity-90 justify-center brightness-50" style="background-color: black; align-items: center; justify-content: center; object-fit: fill;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" :height="setHeight()">
+    <el-carousel :interval="3500" direction="vertical"  class="items-center opacity-90 justify-center brightness-50" style="background-color: black; align-items: center; justify-content: center; object-fit: fill;" arrow="never" :autoplay="true" indicator-position="none" :loop="true" :pause-on-hover="false" :height="setHeight()">
       <el-carousel-item style="object-fit:fill">
-        <video autoplay loop muted style="object-fit: fill; image-fit:fill">
+        <video loop muted autoplay webkit-playsinline playsinline>
           <source src="../assets/church_vid/test_3sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
       <el-carousel-item>
-        <video autoplay loop  muted>
+        <video loop muted autoplay webkit-playsinline playsinline>
           <source src="../assets/church_vid/firstLady_3sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
       
       <el-carousel-item>
-        <video autoplay loop  muted>
+        <video loop muted autoplay webkit-playsinline playsinline>
           <source src="../assets/church_vid/pastor_13sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
 
       
       <el-carousel-item>
-        <video autoplay loop  muted>
+        <video loop muted autoplay webkit-playsinline playsinline>
           <source src="../assets/church_vid/test.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
 
       <el-carousel-item>
-        <video autoplay loop  muted>
+        <video loop muted autoplay webkit-playsinline playsinline>
           <source src="../assets/church_vid/thomas_16sec.mp4" type="video/mp4" >
         </video>
       </el-carousel-item>
@@ -105,8 +105,10 @@ function checkIfPhone(): boolean {
       navigator.userAgent
     )
   ) {
+    console.log('phone')
     return true 
   } else {
+    console.log('not phone')
     return false
   }
 }

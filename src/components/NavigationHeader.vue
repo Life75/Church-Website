@@ -13,17 +13,17 @@
    
 
       <div class="flex flex-col text-center" >
-        <span class="text-font text-2xl" 
+        <span class="text-font lg:text-2xl text-xl" 
           >Jesus Can Help Ministry</span
         >
-        <span class="text-font text-xl text-gray-500 tracking-widest">Pensacola</span>
+        <span class="text-font lg:text-xl text-lg text-gray-500 tracking-widest">Pensacola</span>
       </div>
 
       <router-link to="/"></router-link
     ></el-menu-item>
-    <span class="px-44"></span>
+    <span class="lg:px-44"></span>
 
-    <el-menu-item style="font-size: 20px" index="1">
+    <el-menu-item style="" index="1">
       <template #title> 
         <el-tooltip
         class="box-item"
@@ -31,12 +31,12 @@
         content="Coming Soon!"
         placement="bottom-end"
       >
-      <p>EVENTS</p> 
+      <p class="text-xl">EVENTS</p> 
         </el-tooltip>
       </template>
     </el-menu-item>
 
-    <el-menu-item style="font-size: 20px" index="1">
+    <el-menu-item style="" index="1">
       <template #title> 
         <el-tooltip
         class="box-item"
@@ -44,7 +44,7 @@
         content="Coming Soon!"
         placement="bottom-end"
       >
-      <p>ABOUT US</p> 
+      <p class="lg:text-xl">ABOUT US</p> 
         </el-tooltip>
       </template>
     </el-menu-item>
@@ -60,7 +60,7 @@ import router from "../router/main";
 const activeIndex = ref("1");
 
 function homeRoute() {
-  router.push({ path: "/" });
+  router.push({ path: "/Church-Website" });
 }
 </script>
 
