@@ -1,6 +1,6 @@
 <template>
 <div class="lg:max-w-sm max-w-xs rounded overflow-hidden shadow-lg shadow-[#4a2849]  " >
-  <img class="w-full" src="https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg" alt="Sunset in the mountains">
+  <img class="w-full" src="../assets/church_img/bible.jpg" alt="Sunset in the mountains">
 
   <div class="px-6 py-2">
     <div class="font-bold text-xl mb-2 p-2 text-[#4a2849]">Fellowship and Worship</div>

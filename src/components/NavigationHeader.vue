@@ -31,7 +31,7 @@
         content="Coming Soon!"
         placement="bottom-end"
       >
-      <p class="text-xl">EVENTS</p> 
+      <p class="text-xl ">EVENTS</p> 
         </el-tooltip>
       </template>
     </el-menu-item>
