@@ -96,7 +96,7 @@
         <p class="text-font text-2xl mt-10">Location</p>
         <span class="flex-col text-center">
         <p class="text-xl text-font">6292 Rambler Dr, Pensacola, FL 32505</p>
-        <iframe class="pt-5 align-middle justify-center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.6122700096034!2d-87.26391352209343!3d30.47541847470954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8890bfb54fb26359%3A0x5910671504542cc6!2s6292%20Rambler%20Dr%2C%20Pensacola%2C%20FL%2032505!5e0!3m2!1sen!2sus!4v1685304135713!5m2!1sen!2sus" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="pt-5 align-middle justify-center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.6122700096034!2d-87.26391352209343!3d30.47541847470954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8890bfb54fb26359%3A0x5910671504542cc6!2s6292%20Rambler%20Dr%2C%20Pensacola%2C%20FL%2032505!5e0!3m2!1sen!2sus!4v1685304135713!5m2!1sen!2sus" width="200" height="200" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </span>
       </span>
     </div>
@@ -119,10 +119,8 @@ function checkIfPhone(): boolean {
       navigator.userAgent
     )
   ) {
-    console.log("phone");
     return true;
   } else {
-    console.log("not phone");
     return false;
   }
 }

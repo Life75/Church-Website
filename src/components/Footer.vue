@@ -17,7 +17,7 @@
           :width="300"
           popper-style="box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px;"
         >
-          <template #reference> Like this website? Contact me today! </template>
+          <template #reference> Want a custom website like this? Click here to contact me today! </template>
           <template #default>
             <div
               class="demo-rich-conent"

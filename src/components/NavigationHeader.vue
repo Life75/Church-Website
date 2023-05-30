@@ -1,5 +1,5 @@
 <template>
-  <el-menu
+  <el-menu v-if="!checkIfPhone()"
     :default-active="activeIndex"
     mode="horizontal"
     style="align-items: center; justify-content: center"
@@ -49,12 +49,58 @@
       </template>
     </el-menu-item>
   </el-menu>
+
+  <div v-else class=" text-center justify-center items-center bg-[#f9eeea] w-full outline-none  ">
+   <el-dropdown class=" text-center justify-center items-center">
+    <div class=" text-center" >
+        <span class=" flex flex-col text-font lg:text-2xl text-xl" 
+          >Jesus Can Help Ministry</span
+        >
+        <span class="text-font lg:text-xl text-lg text-gray-500 tracking-widest">Pensacola</span>
+        <el-icon class="el-icon--right">
+        <arrow-down />
+      </el-icon>
+      </div>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item @click="homeRoute()"><p class="text-2xl uppercase">Home</p></el-dropdown-item>
+        <el-dropdown-item disabled=true><el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Coming Soon!"
+        placement="bottom-end"
+      >
+      <p class="text-xl ">EVENTS</p> 
+        </el-tooltip></el-dropdown-item>
+        <el-dropdown-item disabled=true><el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Coming Soon!"
+        placement="bottom-end"
+      >
+      <p class="text-xl ">ABOUT US</p> 
+        </el-tooltip></el-dropdown-item>
+      </el-dropdown-menu>
+      </template>
+    </el-dropdown>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
 import router from "../router/main";
 
+function checkIfPhone(): boolean {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 const activeIndex = ref("1");
@@ -67,5 +113,9 @@ function homeRoute() {
 <style>
 .text-font {
   font-family: "Lora";
+}
+
+p {
+  font-family: "Lora"
 }
 </style>

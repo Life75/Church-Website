@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import NavigationHeader from "./components/NavigationHeader.vue"
 import Footer from "./components/Footer.vue";
+
+
 </script>
 
 <template>
