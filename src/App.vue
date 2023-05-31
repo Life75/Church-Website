@@ -32,6 +32,9 @@ import Footer from "./components/Footer.vue";
     margin: 0; 
     display: grid;
     grid-template-rows: 1fr auto;
+    font-family: 'Lora';
+    src: url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+    
 }
 
 </style>

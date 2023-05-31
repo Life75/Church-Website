@@ -53,7 +53,7 @@
   <div v-else class=" text-center justify-center items-center bg-[#f9eeea] w-full outline-none  ">
    <el-dropdown class=" text-center justify-center items-center">
     <div class=" text-center" >
-        <span class=" flex flex-col text-font lg:text-2xl text-xl" 
+        <span class=" flex flex-col text-font lg:text-2xl text-xl text-[#4B0082]" 
           >Jesus Can Help Ministry</span
         >
         <span class="text-font lg:text-xl text-lg text-gray-500 tracking-widest">Pensacola</span>
