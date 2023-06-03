@@ -106,7 +106,7 @@ function checkIfPhone(): boolean {
 const activeIndex = ref("1");
 
 function homeRoute() {
-  router.push({ path: "/Church-Website" });
+  router.push({ path: "/JCHM" });
 }
 </script>
 
