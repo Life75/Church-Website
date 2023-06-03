@@ -107,6 +107,7 @@
 import Event from "./Event.vue";
 import router from "../router/main";
 //use these colors https://realtimecolors.com/?colors=000000-ffffff-611f69-f4ede4-ecb22e
+
 function setHeight(): string {
   if (checkIfPhone()) {
     return "220px";
