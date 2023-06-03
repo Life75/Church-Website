@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../components/Home.vue'
 import VTestimonials from '../components/Views/VTestimonials.vue'
 import PastorDetail from '../components/PastorDetail.vue'
-const base = '/JCHM'
+const base = '/JesusCanHelpMinistry'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
