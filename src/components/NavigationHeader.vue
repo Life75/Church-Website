@@ -48,6 +48,19 @@
         </el-tooltip>
       </template>
     </el-menu-item>
+
+    <el-menu-item style="" index="1">
+      <template #title> 
+        <el-tooltip
+        class="box-item"
+        effect="dark"
+        content="Coming Soon!"
+        placement="bottom-end"
+      >
+      <router-link to="/SignIn"> <p class="lg:text-xl">SIGN IN</p></router-link> 
+        </el-tooltip>
+      </template>
+    </el-menu-item>
   </el-menu>
 
   <div v-else class=" text-center justify-center items-center bg-[#f9eeea] w-full outline-none  ">

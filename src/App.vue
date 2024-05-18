@@ -6,8 +6,10 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <el-affix :offset="0">
-    <NavigationHeader></NavigationHeader>
+  <el-affix  :offset="0">
+    <div >
+      <NavigationHeader></NavigationHeader>
+    </div>
   </el-affix>
   <RouterView></RouterView>
     <Footer class="footer"></Footer>
