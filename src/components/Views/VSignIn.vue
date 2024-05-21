@@ -1,5 +1,10 @@
 <template>
-    <div class="flex w-full h-full">Sign In</div>
+    <div class=" h-[80vh]">
+        <SignIn/>
+    </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SignIn from "../SignIn.vue"
+
+</script>

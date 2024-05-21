@@ -11,8 +11,10 @@ import Footer from "./components/Footer.vue";
       <NavigationHeader></NavigationHeader>
     </div>
   </el-affix>
-  <RouterView></RouterView>
-    <Footer class="footer"></Footer>
+  <div class="">
+  <RouterView ></RouterView>
+    <Footer class="footer "></Footer>
+  </div>
 </template>
 
 <style>
