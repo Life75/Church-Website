@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-col mt-5 justify-center items-center">
-        <div class="  w-[378px] h-[378px]  px-11 py-15  rounded-md bg-white  shadow-lg ">
+    <div class="flex flex-col mt-5 justify-center items-center ">
+        <div class="  w-[400px] h-[460px]  px-11 py-15  rounded-md bg-white  shadow-lg ">
             <span class="flex flex-col justify-center align-middle  gap-5">
-                
+                <p class="text-center text-4xl font-bold">Login</p>
                 <span class="flex flex-col gap-2">
                 <p class=" text-start">Email</p>
                 <label class="input input-bordered flex items-center gap-3">
@@ -27,7 +27,7 @@
                     <input type="password" class="grow" value="password" />
                 </label>
             </span>
-                <button class="btn btn-wide mr-auto ml-auto mt-4 bg-purple-600 text-white text-lg hover:shadow-md hover:bg-purple-400 font-medium">SIGN IN</button>
+                <button class="btn btn-wide rounded-3xl mr-auto ml-auto mt-4 bg-purple-600 text-white text-lg hover:shadow-2xl hover:bg-purple-500 shadow-md font-medium  ">LOGIN</button>
             </span>
         </div>
     </div>
