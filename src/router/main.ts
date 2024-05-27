@@ -3,6 +3,7 @@ import Home from '../components/Home.vue'
 import VTestimonials from '../components/Views/VTestimonials.vue'
 import PastorDetail from '../components/PastorDetail.vue'
 import VSignIn from '../components/Views/VSignIn.vue'
+import Dashboard from '../components/Dashboard.vue'
 const base = '/'
 const router = createRouter({
   history: createWebHistory(),
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/SignIn',
       name: 'Sign In', 
       component: VSignIn
+    }, 
+    {
+      path: '/Dashboard',
+      name: "Dashboard",
+      component: Dashboard
     }
   ]
 })

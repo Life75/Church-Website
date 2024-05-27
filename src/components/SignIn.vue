@@ -49,7 +49,7 @@
                     </label>
                 </span>
                 <button
-                    class="btn btn-wide rounded-3xl mr-auto ml-auto mt-4 bg-purple-600 text-white text-lg hover:shadow-2xl hover:bg-purple-500 shadow-md font-medium  " @click="loginClick">LOGIN</button>
+                    class="btn btn-wide rounded-3xl mr-auto ml-auto mt-4 bg-purple-600 text-white text-lg hover:shadow-2xl hover:bg-purple-500 shadow-md font-medium"  @click="loginClick" >LOGIN</button>
             </span>
         </div>
         {{errorMessage}}

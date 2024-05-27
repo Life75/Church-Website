@@ -13,7 +13,10 @@ import Footer from "./components/Footer.vue";
   </el-affix>
   <div class="">
   <RouterView ></RouterView>
+
+  <div class="flex justify-center items-center">
     <Footer class="footer "></Footer>
+  </div>
   </div>
 </template>
 
