@@ -52,8 +52,8 @@
 
                 <span class="flex flex-col gap-2 align-middle">
                     <p class="text-xl  ml-0.5">Event Thumbnail</p>
-                    <el-upload action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" drag
-                        class="flex flex-col " :limit="1" v-model:file-list="fileList">
+                    <el-upload :auto-upload="false" action="#" drag :on-change="onChangeUpload"
+                        class="flex flex-col " v-model:file-list="fileList">
                         <span class="flex flex-col justify-center align-middle items-center gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-upload" viewBox="0 0 16 16">
@@ -78,12 +78,12 @@
 
                 <span class="flex flex-row w-full justify-end items-end gap-4 ">
                     <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-red-400 text-white shadow-md hover:shadow-xl hover:bg-red-500">Cancel</button>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-blue-400 text-white shadow-md hover:shadow-xl hover:bg-blue-500">Create</button>
+                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-blue-400 text-white shadow-md hover:shadow-xl hover:bg-blue-500" >Create</button>
                 </span>
 
             </div>
 
-
+            {{ fileList }}
         </el-dialog>
 
 
@@ -106,7 +106,6 @@ let events = []
 const fileList = ref<UploadUserFile[]>([
 
 ])
-
 
 
 
