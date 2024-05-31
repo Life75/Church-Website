@@ -52,7 +52,7 @@
 
                 <span class="flex flex-col gap-2 align-middle">
                     <p class="text-xl  ml-0.5">Event Thumbnail</p>
-                    <el-upload :auto-upload="false" action="#" drag :on-change="onChangeUpload"
+                    <el-upload :auto-upload="false" action="#" drag 
                         class="flex flex-col " v-model:file-list="fileList">
                         <span class="flex flex-col justify-center align-middle items-center gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -65,6 +65,9 @@
                             <div class=" text-sm">Drop or drag file here </div>
                         </span>
                     </el-upload>
+
+                    <input type="file" @change="handleFileUpload">
+                
                 </span>
 
 
@@ -77,8 +80,8 @@
                 </span>
 
                 <span class="flex flex-row w-full justify-end items-end gap-4 ">
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-red-400 text-white shadow-md hover:shadow-xl hover:bg-red-500">Cancel</button>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-blue-400 text-white shadow-md hover:shadow-xl hover:bg-blue-500" >Create</button>
+                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-red-400 text-white shadow-md hover:shadow-xl hover:bg-red-500" @click="onCancel">Cancel</button>
+                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-blue-400 text-white shadow-md hover:shadow-xl hover:bg-blue-500" @click="onCreate" >Create</button>
                 </span>
 
             </div>
@@ -95,11 +98,13 @@
 import { Ref, ref } from 'vue';
 import Event from '../Interfaces/Event';
 import type { UploadProps, UploadUserFile } from 'element-plus'
+import { getStorage, ref as storageRef, uploadBytes } from "firebase/storage"
 
 let eventForm: Ref<Event> = ref(new Event())
 
 let showDialog = ref(false)
-let events = []
+const events = []
+let selectedFile = ref(null)
 
 
 
@@ -131,6 +136,29 @@ const shortcuts = [
         },
     },
 ]
+
+function handleFileUpload(event: any): void {
+    const file = event.target.files[0]
+    selectedFile.value = file
+}
+
+
+async function onCreate() {
+   
+    if(selectedFile.value) {
+    const storage = getStorage()
+    const imageRef = storageRef(storage, "someImage.png")
+
+    let snapshot = await uploadBytes(imageRef, selectedFile.value)
+    console.log(snapshot)
+   }
+}
+
+
+
+function onCancel(): void {
+
+}
 
 </script>
 
