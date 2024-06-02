@@ -52,25 +52,9 @@
 
                 <span class="flex flex-col gap-2 align-middle">
                     <p class="text-xl  ml-0.5">Event Thumbnail</p>
-                    <el-upload :auto-upload="false" action="#" drag 
-                        class="flex flex-col " v-model:file-list="fileList">
-                        <span class="flex flex-col justify-center align-middle items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                class="bi bi-upload" viewBox="0 0 16 16">
-                                <path
-                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                                <path
-                                    d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z" />
-                            </svg>
-                            <div class=" text-sm">Drop or drag file here </div>
-                        </span>
-                    </el-upload>
+                    <input ref="inputFile" type="file" @change="handleFileUpload">
 
-                    <input type="file" @change="handleFileUpload">
-                
                 </span>
-
-
 
                 <span class="flex flex-col align-middle gap-2">
                     <p class=" text-xl   ml-0.5">Description</p>
@@ -80,16 +64,16 @@
                 </span>
 
                 <span class="flex flex-row w-full justify-end items-end gap-4 ">
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-red-400 text-white shadow-md hover:shadow-xl hover:bg-red-500" @click="onCancel">Cancel</button>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-blue-400 text-white shadow-md hover:shadow-xl hover:bg-blue-500" @click="onCreate" >Create</button>
+                    <button
+                        class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-red-400 text-white shadow-md hover:shadow-xl hover:bg-red-500"
+                        @click="onCancel">Cancel</button>
+                    <button
+                        class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg  bg-blue-400 text-white shadow-md hover:shadow-xl hover:bg-blue-500"
+                        @click="onCreate">Create</button>
                 </span>
 
             </div>
-
-            {{ fileList }}
         </el-dialog>
-
-
     </div>
 </template>
 
@@ -97,22 +81,16 @@
 <script setup lang="ts">
 import { Ref, ref } from 'vue';
 import Event from '../Interfaces/Event';
-import type { UploadProps, UploadUserFile } from 'element-plus'
-import { getStorage, ref as storageRef, uploadBytes } from "firebase/storage"
+import EventService from "../services/EventService"
+import EventRepository from "../repository/EventRepository"
 
 let eventForm: Ref<Event> = ref(new Event())
-
+let inputFile = ref(null)
 let showDialog = ref(false)
-const events = []
 let selectedFile = ref(null)
-
-
-
-const fileList = ref<UploadUserFile[]>([
-
-])
-
-
+let emits = defineEmits<{
+    (e: "event-created"): void
+}>()
 
 const shortcuts = [
     {
@@ -144,20 +122,28 @@ function handleFileUpload(event: any): void {
 
 
 async function onCreate() {
-   
-    if(selectedFile.value) {
-    const storage = getStorage()
-    const imageRef = storageRef(storage, "someImage.png")
-
-    let snapshot = await uploadBytes(imageRef, selectedFile.value)
-    console.log(snapshot)
-   }
+    if (eventForm.value) await createEvent(eventForm.value)
+    emits("event-created")
 }
 
-
+async function createEvent(event: Event): Promise<void> {
+    const service = new EventService(new EventRepository())
+    if(selectedFile.value) {        
+        await service.SaveImage(selectedFile.value, event.imageID.toString())
+    } else {
+        event.imageID = "undefined"
+    }
+    await service.Create(event)
+}
 
 function onCancel(): void {
+    showDialog.value = !showDialog.value
+    eventForm.value = new Event()
+    selectedFile.value = null
 
+    //clears input
+    inputFile.value.type = "text"
+    inputFile.value.type = "file"
 }
 
 </script>

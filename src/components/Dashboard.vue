@@ -11,7 +11,7 @@
             </div>
 
             <span class="flex flex-col ">
-                <EventsCRUD></EventsCRUD>
+                <CreateEvent></CreateEvent>
             </span>
         </span>
     </div>
@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import {ref} from "vue"
-import EventsCRUD from "./EventsCRUD.vue"
+import CreateEvent from "./CreateEvent.vue"
 
 enum Tab {
     Events,
