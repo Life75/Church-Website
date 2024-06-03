@@ -10,8 +10,10 @@
                 <span :class="`flex-grow hover:bg-purple-400 py-2 px-2 rounded-sm ${selectedTab == Tab.Sermons ? 'bg-purple-400' : ''} `">Sermons</span>
             </div>
 
-            <span class="flex flex-col ">
+            <span class="flex flex-col gap-2 ">
                 <CreateEvent></CreateEvent>
+                
+                <EventCard/>
             </span>
         </span>
     </div>
@@ -20,6 +22,7 @@
 <script setup lang="ts">
 import {ref} from "vue"
 import CreateEvent from "./CreateEvent.vue"
+import EventCard from "./EventCard.vue"
 
 enum Tab {
     Events,
