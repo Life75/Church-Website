@@ -20,14 +20,18 @@ export default class EventService implements CRUD<Event> {
     Get(): Promise<Event> {
         throw new Error("Method not implemented.");
     }
-    GetAll(): Promise<Event[]> {
-        throw new Error("Method not implemented.");
+    async GetAll(): Promise<Event[]> {
+        return await this.repo.GetAll()
     }
     Update(): Promise<boolean> {
         throw new Error("Method not implemented.");
     }
     Delete(): Promise<boolean> {
         throw new Error("Method not implemented.");
+    }
+
+    async GetImage(imageID: string): Promise<string> {
+        return await this.repo.GetImage(imageID)
     }
 
 }

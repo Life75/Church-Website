@@ -12,8 +12,7 @@
 
             <span class="flex flex-col gap-2 ">
                 <CreateEvent></CreateEvent>
-                
-                <EventCard/>
+                <EventsDisplay/>
             </span>
         </span>
     </div>
@@ -22,7 +21,8 @@
 <script setup lang="ts">
 import {ref} from "vue"
 import CreateEvent from "./CreateEvent.vue"
-import EventCard from "./EventCard.vue"
+//import EventCard from "./EventCard.vue"
+import EventsDisplay from "./EventsDisplay.vue"
 
 enum Tab {
     Events,

@@ -73,7 +73,7 @@
 
 
 <script setup lang="ts">
-import { Ref, ref } from 'vue';
+import { Ref, onBeforeMount, ref } from 'vue';
 import Event from '../Interfaces/Event';
 import EventService from "../services/EventService"
 import EventRepository from "../repository/EventRepository"
@@ -85,6 +85,8 @@ let selectedFile = ref(null)
 let emits = defineEmits<{
     (e: "event-created"): void
 }>()
+
+
 
 const shortcuts = [
     {
