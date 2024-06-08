@@ -1,5 +1,5 @@
 <template>
-    <div id="dashboard" class=" flex items-start  justify-center h-[80vh] ">
+    <div id="dashboard" class=" flex mb-auto   justify-center bg-[#f9eeea] pt-20">
         <span class="flex flex-col w-3/4">
             <div class="bg-purple-200 mb-7 text-center rounded-md text-3xl py-3 shadow-md">
                 <p>Creator Dashboard </p>

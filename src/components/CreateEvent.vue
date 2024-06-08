@@ -16,7 +16,7 @@
 
        
 
-        <el-dialog v-model="showDialog" title="Create Event" width="450" center class="rounded-lg">
+        <el-dialog v-model="showDialog" title="Create Event" width="370"  center class="rounded-lg">
 
             <div class="flex flex-col gap-7">
                 <span class="flex flex-col align-middle gap-2">

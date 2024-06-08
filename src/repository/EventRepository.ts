@@ -8,7 +8,7 @@ export default class EventRepository extends BaseRepository implements CRUD<Even
     private _base = "Event"
     async Create(event: Event): Promise<void> {
          await addDoc(collection(this.db, this._base), {
-            date: event.date,
+            date: event.date.toString(),
             description: event.description, 
             title: event.title, 
             location: event.location, 

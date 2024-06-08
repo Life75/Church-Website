@@ -6,17 +6,18 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <el-affix  :offset="0">
-    <div >
+   <div class="flex flex-col ">
+
+   <div >
       <NavigationHeader></NavigationHeader>
-    </div>
-  </el-affix>
-  <div class="">
-  <RouterView ></RouterView>
+    </div> 
+
+  <RouterView class="flex-1 "></RouterView>
 
   <div class="flex justify-center items-center">
     <Footer class="footer "></Footer>
-  </div>
+  </div> 
+
   </div>
 </template>
 

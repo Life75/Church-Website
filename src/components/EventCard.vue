@@ -1,11 +1,11 @@
 <template>
-    <div class=" w-[425px] bg-white shadow-md hover:shadow-xl">
-        <div v-if="!showMoreDetails" class="relative">
+    <div class="  h  bg-white shadow-md hover:shadow-xl">
+        <div class="relative">
             <div class="absolute top-0  w-20 h-20 bg-purple-400 flex flex-col items-center justify-center text-lg font-semibold">
-                <p>22</p>
-                <p>MAR</p>
+                <p>{{ getDay() }}</p>
+                <p class="uppercase">{{ getMonth() }}</p>
             </div>
-            <img v-if="eventForm?.imageID === 'undefined'" class="h-full" src="https://images.pexels.com/photos/20479821/pexels-photo-20479821/free-photo-of-leaves-in-dew.jpeg" alt="">
+            <img v-if="eventForm?.imageID === 'undefined'" class="h-full " src="https://images.pexels.com/photos/20479821/pexels-photo-20479821/free-photo-of-leaves-in-dew.jpeg" alt="">
             <img v-else class="h-full" :src="url"/>
             <div v-if="eventForm?.imageID !== 'undefined'" class="absolute flex justify-center items-center pr-20 bottom-0 h-16 text-center w-full bg-gray-400  bg-opacity-50 text-white text-2xl font-semibold">
                  <p class="">{{ props.eventForm?.title }}</p></div>
@@ -32,6 +32,7 @@ const props = defineProps({
 })
 
 let showMoreDetails = ref(false)
+let cardIsExpired = ref(false)
 let url = ref("")
 
 onBeforeMount(async () => {
@@ -43,7 +44,32 @@ onBeforeMount(async () => {
         
         props.eventForm ? url.value = await service.GetImage(props.eventForm?.imageID.toString()) : undefined 
     }
+    if(props.eventForm)
+        cardIsExpired.value = checkIfCardIsExpired(props.eventForm)
 })
+
+
+function checkIfCardIsExpired(eventForm:  Event): boolean {
+    const date = new Date()
+    return eventForm.date < date
+}
+
+function getMonth(): String {
+    const date = new Date(props.eventForm!.date)
+    const month = date.toLocaleDateString('default', { month: 'short'})
+    return month
+}
+
+
+function getDay(): String {
+    const date = new Date(props.eventForm!.date)
+    const day = date.getDay()
+   
+    //const month = date.toLocaleDateString('default', { month: 'short'})
+    return day.toString()
+}
+
+
 
 //check if the event has passed to warn for deleting 
 </script>

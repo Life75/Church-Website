@@ -1,6 +1,6 @@
 <template>
-    <span class="flex flex-row gap-4">
-    <div v-for="event in events" class="">
+    <span class=" flex flex-col md:flex-row gap-4 " >
+    <div v-for="event in events" class="w-3/4">
         <EventCard :event-form="event"/>
     </div>
     </span>
