@@ -1,5 +1,5 @@
 <template>
-    <div class="  h  bg-white shadow-md hover:shadow-xl">
+    <div v-show="!isLoading" class="  h  bg-white shadow-md hover:shadow-xl">
         <div class="relative">
             <div class="absolute top-0  w-20 h-20 bg-purple-400 flex flex-col items-center justify-center text-lg font-semibold">
                 <p>{{ getDay() }}</p>
@@ -34,11 +34,14 @@ const props = defineProps({
 let showMoreDetails = ref(false)
 let cardIsExpired = ref(false)
 let url = ref("")
+let isLoading = ref(false)
 
 onBeforeMount(async () => {
     //get card image 
+    isLoading.value = true 
     if(props.eventForm?.imageID != "undefined") {
         //request image 
+        
         const service = new EventService(new EventRepository())
        
         
@@ -46,6 +49,8 @@ onBeforeMount(async () => {
     }
     if(props.eventForm)
         cardIsExpired.value = checkIfCardIsExpired(props.eventForm)
+
+    isLoading.value = false 
 })
 
 
