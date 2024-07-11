@@ -8,19 +8,30 @@
 
 
 <script setup lang="ts">
-import { Ref, onBeforeMount, ref } from 'vue';
+import { Ref, onBeforeMount, ref, watch } from 'vue';
 import EventService from "../services/EventService"
 import EventRepository from "../repository/EventRepository"
 import Event from '../Interfaces/Event';
 import EventCard from './EventCard.vue';
 
+const props = defineProps<{
+    reload: boolean
+}>()
 let events: Ref<Array<Event>> | Ref<undefined> = ref() 
 let isLoading = ref(false)
+let reloadRef = ref(props.reload)
+const service = new EventService(new EventRepository())
+
 onBeforeMount(async () => {
     isLoading.value = true 
-    const service = new EventService(new EventRepository())
     events.value = await service.GetAll()
     isLoading.value = false 
+})
+
+
+watch(() => props.reload, async () => {
+    if(props.reload) events.value = await service.GetAll()
+    reloadRef.value = false 
 })
 
 </script>

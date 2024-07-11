@@ -120,6 +120,8 @@ function handleFileUpload(event: any): void {
 async function onCreate() {
     if (eventForm.value) await createEvent(eventForm.value)
     emits("event-created")
+
+    showDialog.value = false 
 }
 
 async function createEvent(event: Event): Promise<void> {

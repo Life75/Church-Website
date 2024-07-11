@@ -11,8 +11,8 @@
             </div>
 
             <span class="flex flex-col gap-2 ">
-                <CreateEvent></CreateEvent>
-                <EventsDisplay/>
+                <CreateEvent @event-created="onEventCreate"></CreateEvent>
+                <EventsDisplay :reload="reloadEventDisplay"/>
             </span>
         </span>
     </div>
@@ -29,8 +29,14 @@ enum Tab {
     Sermons 
 }
 
+let reloadEventDisplay = ref(false)
+
 let selectedTab = ref(Tab.Events)
 
+
+function onEventCreate(): void {
+    reloadEventDisplay.value = true 
+}
 
 
 </script>
