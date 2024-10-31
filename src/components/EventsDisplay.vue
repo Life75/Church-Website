@@ -1,6 +1,6 @@
 <template>
-    <span class=" flex flex-col md:flex-row gap-4 " >
-    <div v-if="!isLoading" v-for="event in events" class="w-3/4">
+    <span class=" flex flex-col md:flex-row gap-4 flex-wrap">
+    <div v-if="!isLoading" v-for="event in events" class="  w-60 ">
         <EventCard :event-form="event"/>
     </div>
     </span>

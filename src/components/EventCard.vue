@@ -1,5 +1,5 @@
 <template>
-    <div v-show="!isLoading" class="  h  bg-white shadow-md hover:shadow-xl">
+    <div v-show="!isLoading" class="  bg-white shadow-md hover:shadow-xl">
         <div class="relative">
             <div class="absolute top-0  w-20 h-20 bg-purple-400 flex flex-col items-center justify-center text-lg font-semibold">
                 <p>{{ getDay() }}</p>
@@ -10,15 +10,12 @@
             <div v-if="eventForm?.imageID !== 'undefined'" class="absolute flex justify-center items-center pr-20 bottom-0 h-16 text-center w-full bg-gray-400  bg-opacity-50 text-white text-2xl font-semibold">
                  <p class="">{{ props.eventForm?.title }}</p></div>
         </div>
-        <div class="p-6 flex flex-col gap-5">
-
-            <p :class="` ${showMoreDetails ? 'line-clamp-none' : 'line-clamp-3'}`">
-                {{ props.eventForm?.description }}
-            </p>
-        
+        <div class="p-3 flex flex-col gap-5 h-full ">
+            <p :class="` text-wrap  ${showMoreDetails ? 'line-clamp-none' : 'line-clamp-3'}`">
+                {{ props.eventForm?.description }}sefsefsefsfsefsefsefsfsefsefsefsefs
+            </p> 
             <button class="btn bg-blue-300 rounded-sm w-32 ml-auto" @click="showMoreDetails = !showMoreDetails">More Details</button>
-        </div>
-        
+        </div> 
    </div>
 </template>
 
@@ -27,6 +24,7 @@ import {onBeforeMount, ref} from 'vue'
 import Event from '../Interfaces/Event';
 import EventRepository from '../repository/EventRepository';
 import EventService from '../services/EventService';
+import Card from 'primevue/card'
 const props = defineProps({
     eventForm: {type: Event}
 })
